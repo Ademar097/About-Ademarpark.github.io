@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>關於Ademarpark</title>
+    <style>
+        /*網頁風格*/
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1e1e1e;
+        color: #ddd;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #007acc;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #252526;
+        padding: 10px;
+      }
+
+      nav a {
+        color: #ddd;
+        text-decoration: none;
+        padding: 10px;
+        margin: 0 5px;
+      }
+
+      nav a:hover {
+        background-color: #3f3f3f;
+        color: #fff;
+      }
+
+      section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #252526;
+        border: 1px solid #333;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #333;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #ddd;
+      }
+
+      p {
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        margin-bottom: 20px;
+      }
+
+      li {
+        line-height: 1.5;
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: #4ec9b0;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #7fdbca;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1>關於Ademarpark</h1>
+      </header>
+      <nav>
+        <a href="#">首頁</a>
+        <a href="https://github.com/Ademar097">GitHub</a>
+        <a href="https://www.instagram.com/ademarpark/">IG</a>
+        <a href="https://www.facebook.com/ademar.park">FB</a>
+        <a href="https://www.youtube.com/channel/UC5opXMtL6b-L5PFjyT6oZaA">YouTube</a>
+      </nav>
+      <section>
+    <div class="container">
+        <h1 id="title"></h1>
+        <section id="intro"></section>
+      </div>
+      <script>
+        const title = "我的簡介";
+        const intro = [
+          "#include <iostream>",
+          "#include <cstdlib>",
+          "#include <unistd.h>",
+          "#include <Winsock2.h>",
+          "",
+          "int main() {",
+          "    std::cout <<'大家好我是Ademarpark; ",
+          "}",
+          "",
+          "{",
+          "",
+          "我是一名餐飲科一年級學生。;",
+          "我熱愛編程，並且精通 HTML、CSS、C++、C 和 Python 等多種語言。;",
+          "我的夢想是開一間與 AI 結合的科技餐廳，利用 AI 技術提高用餐體驗。;",
+          "在高職就讀餐飲科，目前正在學習各種烹飪技巧。;",
+          "",
+          "}",
+          "",
+          "學習經歷:",
+          "",
+          "{",
+          "2020 年 開始自學 Python;",
+          "2022 年 就讀餐飲科一年級，開始自學 C++、C;",
+          "2023 年 開始學習 HTML 和 CSS 、 javaScript等前端技術;",
+          "}",
+          "",
+          "未來的計畫：",
+          "",
+          "{",
+          "",
+          "2023 年 考中餐丙檢。;",
+          "2024 年 考烘焙丙檢。;",
+          "2025 年 完成學業，開始尋找實習機會。;",
+          "",
+          "}",
+          "",
+          "夢想與願景:",
+          "",
+          "{",
+          "",
+          "我對 AI 技術充滿熱情，希望將其應用於餐飲業，打造一間與眾不同的科技餐廳。;",
+          "我相信 AI 可以為用餐體驗帶來許多改變，例如智能點餐、菜單推薦和餐具清洗等。;",
+          "我希望透過自己的努力和學習，將這個夢想變成現實。;",
+          "",
+          "}",
+          "",
+      "謝謝你的耐心閱讀！ 0;",
+      "",
+      "}"
+    ];
+  
+    const titleEl = document.getElementById("title");
+    const introEl = document.getElementById("intro");
+  
+    let currentLine = 0;
+    let currentChar = 0;
+  
+    function typeIntro() {
+      if (currentLine < intro.length) {
+        if (currentChar < intro[currentLine].length) {
+          introEl.innerHTML += intro[currentLine].charAt(currentChar);
+          currentChar++;
+        } else {
+          introEl.innerHTML += "<br />";
+          currentLine++;
+          currentChar = 0;
+        }
+      } else {
+        clearInterval(typingInterval);
+      }
+    }
+  
+    titleEl.innerHTML = title;
+  
+    /*調打字速度*/
+    const typingInterval = setInterval(typeIntro, 50);
+  </script>
+  </body>
+  </html>
